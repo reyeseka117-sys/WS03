@@ -1,0 +1,17 @@
+{
+    "name": "reyeseka117sys/ws03",
+    "description": "",
+    "authors": [
+        {
+            "name": "Eka Reyes",
+            "email": "reyeseka117@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "framework/",
+            "Framework\\Middleware\\": "framework/Middleware/",
+            "App\\": "app/"
+        }
+    }
+}

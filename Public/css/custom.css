@@ -1,0 +1,273 @@
+/* ============================================================
+   WORKOPIA — CUSTOM STYLESHEET
+   Pangalan ng Student: ______________________________
+   Theme Name:          ______________________________
+   ============================================================ */
+
+/*   --- Google Fonts Import (optional) ---
+Pumunta sa https://fonts.google.com, pumili ng font,
+   i-copy ang @import link, i-paste dito.
+
+   Halimbawa:*/
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+
+
+
+/* ----------------------------------------------------------------
+   SECTION 1: MGA KULAY (Colors)
+   ----------------------------------------------------------------
+   Palitan ang bawat hex code ng kulay na gusto mo.
+   Tip: https://coolors.co — para pumili ng color palette
+        https://htmlcolorcodes.com — para makita ang hex codes
+   ---------------------------------------------------------------- */
+
+:root {
+  --color-header:       #071A39;   /* Header at navigation bar */
+  --color-accent:       #0F2A55;   /* "Post a Job" button at mga highlight */
+  --color-accent-border: #0D234C;   /* Border ng mga accent elements */
+  --color-page-bg:      #FFFFFF;   /* Background ng buong page */
+  --color-card-bg:      #FFFFFF;   /* Background ng mga card/box */
+  --color-heading:      #071A39;   /* Kulay ng mga title at heading */
+  --color-body-text:    #071A39;   /* Regular na body text */
+  --color-link:         #071A39;   /* Mga clickable na links */
+  --color-tag-bg:       #EAF1FC;   /* Background ng mga tag/badge */
+  --color-tag-text:     #071A39;   /* Text ng mga tag/badge */
+  --color-footer:       #071A39;   /* Footer background */
+  --showcase-overlay:   rgba(7, 26, 57, 0.22); /* Hero banner overlay */
+}
+
+
+/* ----------------------------------------------------------------
+   SECTION 2: MGA FONT (Typography)
+   ----------------------------------------------------------------
+   Palitan ng font name na gusto mo.
+   Kung gagamit ng Google Font, i-import muna sa taas ng file.
+
+   Halimbawa ng built-in fonts (hindi na kailangan ng import):
+     'Georgia', serif
+     'Arial', sans-serif
+     'Verdana', sans-serif
+     'Times New Roman', serif
+     'Courier New', monospace
+   ---------------------------------------------------------------- */
+
+:root {
+  --font-heading: 'Playfair Display', serif;      /* Para sa mga title at heading */
+  --font-body:    'Lato', sans-serif;   /* Para sa regular na text */
+}
+
+
+/* ----------------------------------------------------------------
+   SECTION 3: HUGIS AT ESTILO (Shape & Style)
+   ----------------------------------------------------------------
+   --border-radius:
+     0px      = matuwid / sharp corners
+     4px      = konting rounding
+     8px      = medyo rounded
+     16px     = malakas na rounding
+     9999px   = pill shape / fully round
+
+   --card-shadow:
+     none                           = walang shadow
+     0 2px 8px rgba(0,0,0,0.08)    = mahinang shadow
+     0 4px 16px rgba(0,0,0,0.20)   = malakas na shadow
+   ---------------------------------------------------------------- */
+
+:root {
+  --border-radius: 8px;
+  --card-shadow:   0 2px 8px rgba(96, 125, 139, 0.20); /* 0.8 opacity = mahinang shadow hangang .20 */
+}
+
+
+
+
+/* ================================================================
+   === HUWAG I-EDIT ANG SECTION NA ITO (unless gusto mong advanced!) ===
+   === Ito ang code na gumagamit ng iyong mga variables sa itaas.  ===
+   ================================================================ */
+
+body {
+  font-family: var(--font-body) !important;
+  background-color: var(--color-page-bg) !important;
+  color: var(--color-body-text) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  color: var(--color-heading) !important;
+}
+
+a {
+  color: var(--color-link) !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+header {
+  background-color: var(--color-header) !important;
+}
+
+.bg-blue-900,
+.bg-blue-800 {
+  background-color: var(--color-header) !important;
+  color: #ffffff !important;
+}
+
+.bg-yellow-500 {
+  background-color: var(--color-accent) !important;
+  color: #ffffff !important;
+}
+
+.text-yellow-500 {
+  color: var(--color-accent) !important;
+}
+
+.hover\:bg-yellow-600:hover {
+  background-color: var(--color-accent) !important;
+  filter: brightness(0.88);
+}
+
+.bg-blue-500 {
+  background-color: var(--color-accent) !important;
+  color: #ffffff !important;
+}
+
+.bg-white {
+  background-color: var(--color-card-bg) !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+.bg-indigo-100 {
+  background-color: var(--color-tag-bg) !important;
+}
+
+.text-indigo-700,
+.text-indigo-800 {
+  color: var(--color-link) !important;
+}
+
+.text-blue-700,
+.text-blue-500,
+.text-blue-900 {
+  color: #ffffff !important;
+}
+
+button,
+.rounded,
+.rounded-lg,
+.rounded-full {
+  border-radius: var(--border-radius) !important;
+}
+
+.overlay {
+  background-color: var(--showcase-overlay) !important;
+}
+
+footer,
+.bg-indigo-900 {
+  background-color: var(--color-footer) !important;
+}
+
+.bg-gray-100 {
+  background-color: var(--color-page-bg) !important;
+}
+
+.showcase {
+  background-color: var(--color-header);
+  background-image: linear-gradient(135deg, rgba(7, 26, 57, 0.55), rgba(79, 70, 229, 0.35)), url('../images/showcase.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase .overlay {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+.showcase-input {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: var(--color-link);
+  min-width: 220px;
+}
+
+.showcase-input::placeholder {
+  color: rgba(7, 26, 57, 0.7);
+}
+
+.showcase-button {
+  background-color: #ffffff;
+  color: var(--color-header);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.showcase-button:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.showcase-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+}
+
+.showcase-subtitle {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .showcase-title {
+    font-size: 6.5rem;
+  }
+
+  .showcase-subtitle {
+    font-size: 2.8rem;
+  }
+}
+
+.topbanner {
+  background: linear-gradient(135deg, var(--color-header), var(--color-accent));
+}
+
+.topbanner h2,
+.topbanner p {
+  color: #ffffff !important;
+}
+
+header h1 a {
+  color: #ffffff !important;
+}
+
+/* ----------------------------------------------------------------
+   ADVANCED ZONE — Para sa gustong mag-explore pa!
+   ----------------------------------------------------------------
+   Alisin ang /* at */ para i-activate ang isang rule.
+   ---------------------------------------------------------------- */
+
+/* Hover effect sa mga link */
+/* a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+} */
+
+/* Kulay ng input fields */
+/* input, select, textarea {
+  border-color: var(--color-link) !important;
+  border-radius: var(--border-radius) !important;
+} */
+
+/* Kulay ng success badge */
+/* .bg-green-100 { background-color: #d1fae5 !important; }
+   .text-green-800 { color: #065f46 !important; } */
+
+   
